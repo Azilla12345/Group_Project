@@ -1,10 +1,22 @@
 public class Prisoner {
     int keys;
-    int [] inventory;
+    String [][] inventory;
 
     public Prisoner() {
         keys = 0;
-        inventory = new int[]{(0)};
+        inventory = new String[6][6];
+    }
+
+
+    public void add(String item) {
+        for (int i = 0; i < inventory.length; i++) {
+            for (int j = 0; j < inventory[0].length; j++) {
+                if (inventory[i][j].equals(null)) {
+                    inventory[i][j] = item;
+                    break;
+                }
+            }
+        }
     }
 
 
