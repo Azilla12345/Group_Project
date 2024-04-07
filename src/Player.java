@@ -1,22 +1,31 @@
 public class Player {
     int keys;
-    String [][] inventory;
+    String [] inventory;
 
     public Player() {
         keys = 0;
-        inventory = new String[6][6];
+        inventory = new String[7];
+        inventory[0] = "empty";
+        inventory[1] = "empty";
+        inventory[2] = "empty";
+        inventory[3] = "empty";
+        inventory[4] = "empty";
+        inventory[5] = "empty";
+        inventory[6] = "empty";
     }
 
 
     public void add(String item) {
         for (int i = 0; i < inventory.length; i++) {
-            for (int j = 0; j < inventory[0].length; j++) {
-                if (inventory[i][j].equals(null)) {
-                    inventory[i][j] = item;
-                    break;
-                }
+            if (inventory[i].equals("empty")) {
+                inventory[i] = item;
+                break;
             }
         }
+    }
+
+    public String[] getInventory() {
+        return inventory;
     }
 
 

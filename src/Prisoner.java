@@ -1,15 +1,15 @@
 public class Prisoner {
-    Riddles riddle = new Riddles();
-    public Prisoner() {
-        riddle.getRiddle();
-
-    }
-
+    String question;
     String answer;
     String item;
 
+    public Prisoner() {
+        item = "gunpowder";
+    }
+
+
     public String question(String response) {
-        if (response == answer) {
+        if (response.equals(answer)) {
             return item;
         }
         return "screw you";
