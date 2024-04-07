@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class PrisonRunner {
     public void Start() {
+        Endings endings = new Endings();
         Scanner myScanner = new Scanner(System.in);
 
         Player player = new Player();
         int day = 1;
-        int schedule = 0;
         Riddles riddle = new Riddles();
         while (day != 8) {
             System.out.println("You wake up in your ventilated prison cell, guarded by the same five guards.");
@@ -54,5 +54,15 @@ public class PrisonRunner {
             System.out.println("In your inventory, you have " + Arrays.toString(player.getInventory()));
             day++;
         }
+        if (!(player.inventory[6].equals("empty"))) {
+            endings = new GoodEnding();
+        } else if (!(player.inventory[4].equals("empty"))) {
+            endings = new Key();
+        } else if (!(player.inventory[2].equals("empty"))) {
+            endings = new Bomb();
+        } else {
+            endings = new BadEnding();
+        }
+        endings.end();
     }
 }
