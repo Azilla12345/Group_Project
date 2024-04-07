@@ -1,7 +1,7 @@
 import java.util.Locale;
 
 public class Riddles{
-    String item = "part";
+    String item = "favor";
     String[][] riddle = new String[2][7];
     public Riddles() {
         riddle[0][0] = "What has to be broken before you can use it?";

@@ -9,6 +9,9 @@ public class PrisonRunner {
         Player player = new Player();
         int day = 1;
         Riddles riddle = new Riddles();
+        System.out.println("A year ago, you were wrongfully convicted of a crime you didn't commit");
+        System.out.println("Not a lot of time remains before you execution");
+        System.out.println("What shall you do?");
         while (day != 8) {
             System.out.println("You wake up in your ventilated prison cell, guarded by the same five guards.");
             try{
@@ -46,7 +49,7 @@ public class PrisonRunner {
             } catch (InterruptedException e) {
                 System.out.println("Error!");
             }
-            System.out.println("Well, so you need parts, do you? Well, first you must answer my riddle!");
+            System.out.println("So, you need a few favors huh? Well, first you must answer my riddle!");
             riddle.setRiddle(day);
             String answer = myScanner.nextLine();
             player.add(riddle.getAnswer(answer));
