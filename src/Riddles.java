@@ -1,6 +1,6 @@
 import java.util.Locale;
 
-public class Riddles extends Prisoner {
+public class Riddles{
     String item = "part";
     String[][] riddle = new String[2][7];
     public Riddles() {
